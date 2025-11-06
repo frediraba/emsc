@@ -48,19 +48,26 @@ export async function contactAction(_: FormState, formData: FormData): Promise<F
     // Basic host check
     const hdrs = await headers();
     const host = hdrs.get("host") || "";
-    const allowed = process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL).host : undefined;
+    const allowed = process.env.NEXT_PUBLIC_SITE_URL
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL).host
+      : undefined;
     if (allowed && host && host !== allowed) {
       return { status: "error", message: "Päringu päritolu ei ole lubatud." };
     }
 
     // Rate limit by IP
-    const ip = (hdrs.get("x-forwarded-for") || hdrs.get("x-real-ip") || "unknown").split(",")[0].trim();
+    const ip = (hdrs.get("x-forwarded-for") || hdrs.get("x-real-ip") || "unknown")
+      .split(",")[0]
+      .trim();
     const now = Date.now();
     const rec = rateMap.get(ip);
     if (!rec || now - rec.start > RATE_LIMIT_WINDOW_MS) {
       rateMap.set(ip, { count: 1, start: now });
     } else if (rec.count >= RATE_LIMIT_MAX) {
-      return { status: "error", message: "Liiga palju päringuid. Proovi mõne minuti pärast uuesti." };
+      return {
+        status: "error",
+        message: "Liiga palju päringuid. Proovi mõne minuti pärast uuesti.",
+      };
     } else {
       rec.count += 1;
       rateMap.set(ip, rec);

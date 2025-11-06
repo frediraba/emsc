@@ -90,7 +90,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex items-center rounded-md bg-foreground px-4 py-2 text-background disabled:opacity-60"
+          className="bg-foreground text-background inline-flex items-center rounded-md px-4 py-2 disabled:opacity-60"
         >
           {pending ? "Saatmine…" : "Saada"}
         </button>

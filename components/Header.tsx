@@ -18,10 +18,17 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/80 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 border-b backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" aria-label="EMSC avaleht">
-          <Image src="/logo.png" alt="EMSC logo" width={40} height={40} priority className="rounded" />
+          <Image
+            src="/logo.png"
+            alt="EMSC logo"
+            width={40}
+            height={40}
+            priority
+            className="rounded"
+          />
           <span className="font-semibold tracking-tight">EMSC</span>
         </Link>
         <nav className="hidden gap-6 text-sm sm:flex" aria-label="Põhinavigatsioon">
@@ -53,7 +60,7 @@ export default function Header() {
           <ThemeToggle />
           <a
             href="/kontakt"
-            className="btn hidden rounded-md px-3 py-1.5 text-background hover:opacity-90 sm:inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2"
+            className="btn text-background hidden rounded-md px-3 py-1.5 hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 sm:inline-flex"
             style={{ backgroundColor: "var(--accent)" }}
           >
             Küsi pakkumist
@@ -61,15 +68,27 @@ export default function Header() {
         </div>
       </div>
       {open && (
-        <div id="mobile-nav" className="sm:hidden border-t bg-background">
-          <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
-            <Link href="/teenused" onClick={() => setOpen(false)} className={isActive("/teenused") ? "font-semibold" : ""}>
+        <div id="mobile-nav" className="bg-background border-t sm:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+            <Link
+              href="/teenused"
+              onClick={() => setOpen(false)}
+              className={isActive("/teenused") ? "font-semibold" : ""}
+            >
               Teenused
             </Link>
-            <Link href="/meist" onClick={() => setOpen(false)} className={isActive("/meist") ? "font-semibold" : ""}>
+            <Link
+              href="/meist"
+              onClick={() => setOpen(false)}
+              className={isActive("/meist") ? "font-semibold" : ""}
+            >
               Meist
             </Link>
-            <Link href="/kontakt" onClick={() => setOpen(false)} className={isActive("/kontakt") ? "font-semibold" : ""}>
+            <Link
+              href="/kontakt"
+              onClick={() => setOpen(false)}
+              className={isActive("/kontakt") ? "font-semibold" : ""}
+            >
               Kontakt
             </Link>
           </div>

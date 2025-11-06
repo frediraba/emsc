@@ -14,14 +14,7 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
   adjustFontFallback: true,
-  fallback: [
-    "system-ui",
-    "-apple-system",
-    "Segoe UI",
-    "Roboto",
-    "Arial",
-    "sans-serif",
-  ],
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "sans-serif"],
 });
 
 const geistMono = Geist_Mono({
@@ -37,16 +30,14 @@ export const metadata: Metadata = {
     default: "EMSC – Estonian Motorsport Safety Crew",
     template: "%s | EMSC",
   },
-  description:
-    "EMSC pakub professionaalset ohutusteenust mootorispordi üritustele üle Eesti.",
+  description: "EMSC pakub professionaalset ohutusteenust mootorispordi üritustele üle Eesti.",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
     title: "EMSC – Estonian Motorsport Safety Crew",
-    description:
-      "Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.",
+    description: "Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.",
     type: "website",
     locale: "et_EE",
     siteName: "EMSC",
@@ -54,8 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "EMSC – Estonian Motorsport Safety Crew",
-    description:
-      "Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.",
+    description: "Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -72,7 +62,9 @@ export default function RootLayout({
   return (
     <html lang="et" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <a href="#sisu" className="skip-link">Liigu sisu juurde</a>
+        <a href="#sisu" className="skip-link">
+          Liigu sisu juurde
+        </a>
         <Script id="theme-init" strategy="beforeInteractive">
           {`
             const q = window.matchMedia('(prefers-color-scheme: dark)');
@@ -90,17 +82,16 @@ export default function RootLayout({
         )}
         <Script id="org-jsonld" type="application/ld+json">
           {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'EMSC',
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "EMSC",
             url: siteUrl,
             sameAs: [],
-            description:
-              'Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.',
+            description: "Professionaalne ohutusteenus mootorispordi võistlustel ja üritustel.",
           })}
         </Script>
         <SentryInit />
-        <div className="min-h-screen grid grid-rows-[auto,1fr,auto]">
+        <div className="grid min-h-screen grid-rows-[auto,1fr,auto]">
           <Header />
           {children}
           <Footer />

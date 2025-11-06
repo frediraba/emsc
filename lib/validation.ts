@@ -1,11 +1,7 @@
 import { z } from "zod";
 
 export const contactSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(2, "Palun sisesta nimi.")
-    .max(100, "Nimi on liiga pikk."),
+  name: z.string().trim().min(2, "Palun sisesta nimi.").max(100, "Nimi on liiga pikk."),
   email: z.string().trim().email("Palun sisesta kehtiv e-post."),
   message: z
     .string()

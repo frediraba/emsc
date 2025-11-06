@@ -17,8 +17,7 @@ export default async function OG() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          background:
-            "linear-gradient(135deg, #1a1a1a 0%, #3b0d0d 25%, #d62828 60%, #1a1a1a 100%)",
+          background: "linear-gradient(135deg, #1a1a1a 0%, #3b0d0d 25%, #d62828 60%, #1a1a1a 100%)",
           color: "#fff",
           padding: 64,
         }}

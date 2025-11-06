@@ -13,11 +13,19 @@ export default function MeistPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden">
-        <Image src="/12.jpg" alt="" fill priority sizes="100vw" className="object-cover object-[50%_27%] opacity-70 dark:opacity-50" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background/90" />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
-          <h1 className="fade-up text-3xl sm:text-4xl font-bold tracking-tight">Meist</h1>
-          <p className="fade-up-delay mt-3 max-w-3xl text-foreground/85">
+        <Image
+          src="/12.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_27%] opacity-70 dark:opacity-50"
+          aria-hidden
+        />
+        <div className="from-background/60 to-background/90 absolute inset-0 bg-gradient-to-b" />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+          <h1 className="fade-up text-3xl font-bold tracking-tight sm:text-4xl">Meist</h1>
+          <p className="fade-up-delay text-foreground/85 mt-3 max-w-3xl">
             EMSC on Estonian Motorsport Safety Crew – ohutusmeeskond, kes toetab mootorispordi
             võistlusi ja sündmusi üle Eesti. Meie tugevus on läbimõeldud ettevalmistus, ühtne
             tegutsemine ja rahulik otsustamine ka pingelistes olukordades.
@@ -25,21 +33,31 @@ export default function MeistPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
+      <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Script id="breadcrumbs-about" type="application/ld+json">
           {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Avaleht', item: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com' },
-              { '@type': 'ListItem', position: 2, name: 'Meist', item: (process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com') + '/meist' },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Avaleht",
+                item: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Meist",
+                item: (process.env.NEXT_PUBLIC_SITE_URL || "https://example.com") + "/meist",
+              },
             ],
           })}
         </Script>
         <div className="grid gap-6 sm:grid-cols-2">
           <div className="rounded-lg border p-6">
             <h2 className="text-xl font-semibold">Meie põhimõtted</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-foreground/80">
+            <ul className="text-foreground/80 mt-3 list-disc space-y-2 pl-5">
               <li>Ohutus ennekõike – kõigi osapoolte jaoks.</li>
               <li>Selge plaan ja rollid igal sündmusel.</li>
               <li>Kiire ja koordineeritud reageerimine.</li>
@@ -48,7 +66,7 @@ export default function MeistPage() {
           </div>
           <div className="rounded-lg border p-6">
             <h2 className="text-xl font-semibold">Kogemus</h2>
-            <p className="mt-3 text-foreground/80">
+            <p className="text-foreground/80 mt-3">
               Meeskonnal on kogemus ringraja-, ralli- ja driftisündmustelt. Vajaduse korral kaasame
               partnerid meditsiini- ja päästevaldkonnast, et tagada terviklahendus.
             </p>
@@ -57,22 +75,22 @@ export default function MeistPage() {
 
         <section className="mt-12 rounded-lg border p-6">
           <h2 className="text-xl font-semibold">Miks EMSC</h2>
-          <p className="mt-3 text-foreground/80">
-            Meil on üle 15 aasta kogemust mootorispordi sündmuste turvalisel korraldamisel. 
-            Pakkume terviklahendust alates ohutusplaanist kuni kiire reageerimiseni kohapeal, 
-            tehes tihedat koostööd korraldajate, tervishoiupartnerite ja päästevaldkonna esindajatega.
+          <p className="text-foreground/80 mt-3">
+            Meil on üle 15 aasta kogemust mootorispordi sündmuste turvalisel korraldamisel. Pakkume
+            terviklahendust alates ohutusplaanist kuni kiire reageerimiseni kohapeal, tehes tihedat
+            koostööd korraldajate, tervishoiupartnerite ja päästevaldkonna esindajatega.
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
             <div className="rounded-md border p-4">
-              <p className="text-sm text-foreground/60">Kogemus</p>
+              <p className="text-foreground/60 text-sm">Kogemus</p>
               <p className="mt-1 text-lg font-semibold">15+ aastat</p>
             </div>
             <div className="rounded-md border p-4">
-              <p className="text-sm text-foreground/60">Fookus</p>
+              <p className="text-foreground/60 text-sm">Fookus</p>
               <p className="mt-1 text-lg font-semibold">Ohutus ja sujuvus</p>
             </div>
             <div className="rounded-md border p-4">
-              <p className="text-sm text-foreground/60">Ulatus</p>
+              <p className="text-foreground/60 text-sm">Ulatus</p>
               <p className="mt-1 text-lg font-semibold">Üle Eesti</p>
             </div>
           </div>
@@ -80,13 +98,16 @@ export default function MeistPage() {
 
         <section className="mt-14">
           <h2 className="text-2xl font-semibold">Meeskond õppusel</h2>
-          <p className="mt-2 max-w-3xl text-foreground/80">
-            Hetked meie väljaõppest ja treeningutest – pärisolukorra harjutamine, ohutusprotseduuride
-            lihvimine ja meeskonnatöö.
+          <p className="text-foreground/80 mt-2 max-w-3xl">
+            Hetked meie väljaõppest ja treeningutest – pärisolukorra harjutamine,
+            ohutusprotseduuride lihvimine ja meeskonnatöö.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((n) => (
-              <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg border bg-black/5">
+              <div
+                key={n}
+                className="relative aspect-[4/3] overflow-hidden rounded-lg border bg-black/5"
+              >
                 <Image
                   src={`/${n}.jpg`}
                   alt={`Meeskonna õppus ${n}`}
@@ -104,7 +125,7 @@ export default function MeistPage() {
         <div className="mt-10 text-center">
           <a
             href="/kontakt"
-            className="inline-flex rounded-md px-5 py-2.5 text-background"
+            className="text-background inline-flex rounded-md px-5 py-2.5"
             style={{ backgroundColor: "var(--accent)" }}
           >
             Küsi pakkumist
