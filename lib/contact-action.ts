@@ -1,7 +1,7 @@
 "use server";
 
 import { contactSchema } from "@/lib/validation";
-import { resend } from "@/lib/resend";
+import resend from "@/lib/resend";
 import { headers } from "next/headers";
 
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 min
