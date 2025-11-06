@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" aria-label="EMSC avaleht">
-          <Image src="/logo.png" alt="EMSC logo" width={28} height={28} priority className="rounded" />
+          <Image src="/logo.png" alt="EMSC logo" width={40} height={40} priority className="rounded" />
           <span className="font-semibold tracking-tight">EMSC</span>
         </Link>
         <nav className="hidden gap-6 text-sm sm:flex" aria-label="Põhinavigatsioon">
