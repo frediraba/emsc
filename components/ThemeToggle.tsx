@@ -5,7 +5,8 @@ import { useState } from "react";
 
 export default function ThemeToggle() {
   const [tick, setTick] = useState(0);
-  const isDark = typeof document !== "undefined" && document.documentElement.classList.contains("dark");
+  const isDark =
+    typeof document !== "undefined" && document.documentElement.classList.contains("dark");
 
   const toggle = () => {
     const next = !isDark;
@@ -23,7 +24,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md border hover:bg-foreground/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+      className="hover:bg-foreground/5 inline-flex h-9 w-9 items-center justify-center rounded-md border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
       aria-label="Teema lüliti"
       data-tick={tick}
     >

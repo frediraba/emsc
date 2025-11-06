@@ -19,10 +19,10 @@ export default function MeistPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_27%] opacity-70 dark:opacity-50"
+          className="object-cover object-[50%_27%] opacity-100 sm:opacity-80 dark:opacity-80 sm:dark:opacity-60"
           aria-hidden
         />
-        <div className="from-background/60 to-background/90 absolute inset-0 bg-gradient-to-b" />
+        <div className="from-background/40 to-background/70 sm:from-background/60 sm:to-background/90 absolute inset-0 bg-gradient-to-b" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <h1 className="fade-up text-3xl font-bold tracking-tight sm:text-4xl">Meist</h1>
           <p className="fade-up-delay text-foreground/85 mt-3 max-w-3xl">
