@@ -3,9 +3,6 @@ node_modules/
 out/
 build/
 dist/
-.vercel/
 coverage/
-*.log
-.DS_Store
-.env*
-!.env.example
+package-lock.json
+

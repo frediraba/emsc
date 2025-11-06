@@ -1,0 +1,16 @@
+{
+  "name": "EMSC – Estonian Motorsport Safety Crew",
+  "short_name": "EMSC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d62828",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

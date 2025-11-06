@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1f1f1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="#ffffff">
+    <text x="80" y="280" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700">EMSC</text>
+    <text x="80" y="360" font-family="Arial, Helvetica, sans-serif" font-size="40" opacity="0.9">Estonian Motorsport Safety Crew</text>
+    <text x="80" y="420" font-family="Arial, Helvetica, sans-serif" font-size="28" opacity="0.8">Professionaalne ohutusteenus võistlustel ja üritustel</text>
+  </g>
+</svg>
+
